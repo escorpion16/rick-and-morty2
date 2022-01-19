@@ -19,9 +19,13 @@ const App = () => {
 
   return (
     <div className="App">
-      {data && <LocationInfo name={data.name} type={data.type} dimension={data.dimension} residentsLength={data.residents.length} />}
+      <div className='banner'></div>
+      <h1>Rick and Morty</h1>
       {data && <SearchBox setData={setData}/>}
-      {data && <ResidentsList data={data}/>}
+      {data && <LocationInfo name={data.name} type={data.type} dimension={data.dimension} residentsLength={data.residents.length} />}
+      <div className='residentCard'>
+        {data && <ResidentsList data={data}/>}
+      </div>
     </div>
   );
 }

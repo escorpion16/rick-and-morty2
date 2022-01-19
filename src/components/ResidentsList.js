@@ -1,12 +1,11 @@
 import ResidentInfo from './ResidentInfo';
+import '../styles/residentList.css';
 
 const ResidentsList = ({data}) => {
-
-    const list = data && data.residents.slice(0,10).map(resident => <div key={resident}> <ResidentInfo residentUrl={resident} /> </div>)
     
     return (
-        <div>
-            {list}
+        <div className="resident-list">
+            {data && data.residents.slice(0,10).map(resident => <div key={resident}> <ResidentInfo residentUrl={resident} /> </div>)}
         </div>
     );
 };

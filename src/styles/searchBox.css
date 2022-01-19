@@ -1,0 +1,19 @@
+.searchContainer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.searchContainer input {
+    width: 40%;
+    height: 1.6rem;
+    background-color: #4A494C;
+    border: none;
+    text-align: center;
+}
+
+.searchContainer button {
+    border: 1px solid #fff;
+    height: 1.6rem;
+    color: #fff;
+    background-color: #1A1A1A;
+}

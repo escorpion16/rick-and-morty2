@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/searchBox.css';
+
 
 const SearchBox = ({ setData }) => {
 
@@ -11,8 +13,8 @@ const SearchBox = ({ setData }) => {
     }
     
     return (
-        <div>
-            <input type="text" onChange={e => setId(e.target.value)} value={id} />
+        <div className='searchContainer'>
+            <input type="text" placeholder='Type a location id...' onChange={e => setId(e.target.value)} value={id} />
             <button onClick={ search }>Search</button>
         </div>
     );

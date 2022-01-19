@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "../styles/residentInfo.css";
 
 const ResidentInfo = ({ residentUrl }) => {
     
@@ -17,12 +18,19 @@ const ResidentInfo = ({ residentUrl }) => {
 
 
     return (
-        <div>
-            <h3>{dataResident?.name}</h3>
-            <img src={dataResident?.image} alt={dataResident?.name}/>
-            <h3>{dataResident?.status} - {dataResident?.species}</h3>
-            <h3>{dataResident?.origin.name}</h3>
-            <h3>{dataResident?.episode.length}</h3>
+        <div className='residentContainer'>
+            <div className='residentPhoto'>
+                <img src={dataResident?.image} alt={dataResident?.name}/>
+            </div>
+            <div className='residentContent'>
+                <h3>{dataResident?.name}</h3>
+                <div className='infoStatus'>
+                    <div className={dataResident?.status === 'Alive' ?  'circleStatusGreen' : dataResident?.status === 'Dead' ? 'circleStatusRed' : 'circleStatusGray'} ></div>
+                    <h5>{dataResident?.status} - {dataResident?.species}</h5>
+                </div>
+                <h5>Origin: {dataResident?.origin.name}</h5>
+                <h5>Episodes where appear: {dataResident?.episode.length}</h5>
+            </div>
         </div>
     );
 };

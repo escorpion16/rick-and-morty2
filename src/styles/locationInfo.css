@@ -1,0 +1,8 @@
+.location {
+    color: #fff;
+}
+
+.location .locationContent {
+    display: flex;
+    justify-content: space-around;
+}
